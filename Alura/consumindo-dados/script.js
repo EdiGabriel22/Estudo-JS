@@ -1,11 +1,9 @@
-console.log("Mandando oi pro amigo!");
-
-function mandaMensagem() {
-    console.log("Tudo bem?");
-    console.log("Vou te mandar uma solicitação!");
-    console.log("Solicitação recebida!");
+async function buscaEndereco() {
+    var consultCEP = await fetch('https://viacep.com.br/ws/01001000/json/')
+    var consultCEPConvertida = await consultCEP.json()
+    console.log(consultCEPConvertida)
 }
 
-setTimeout(mandaMensagem, 5000);
+                    
 
-console.log("Tchau tchau!");
+buscaEndereco();
