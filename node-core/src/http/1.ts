@@ -6,11 +6,9 @@ http.createServer((req, res) => {
     req.on('data', (chunk) => {
         body += chunk.toString()
         i++
-        console.log(req.method)
     })
     req.on('end', () => {
         console.log(i)
-        console.log(body)
         res.end()
     })
 }).listen(3000)
